@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 11</title>
+</head>
+<body>
+    <script>
+        // Chương trình tính tổng 100 số
+        function tong100() {
+            var sum = 0;
+            var i = 1;
+            while (i <= 100) {
+                sum += i;
+                i++;
+            }
+            document.write("Tổng 100 số đầu là: " + sum);
+        }
+        //Chương trình tổng n số nguyên chia hết cho 3 nhỏ hơn
+        function tongnSoTuNhien(n) {
+            var sum = 0;
+            var i = 1;
+            while (i <= 100) {
+                if (i %3 == 0) {
+                    sum += i;
+                }
+                i++; 
+            }
+            document.write("Tổng n số tự nhiên chia hết cho 3 và nhỏ hơn n là: " + sum);
+        }
+        // Viết chương trình in ra 100 số Fibonacciđầu tiên
+        function fibonaci100(params) {
+            var number1 =0 ;
+            var number2 =1 ;
+            var iFibonaci = 1;
+            document.write("100 so Fibonaci dau tien la:");
+            while(iFibonaci <= 100) {
+			document.write(number1 + ", ");
+			var sumNumber1Number2 = number1 + number2;
+			number1 = number2;
+			number2 = sumNumber1Number2;
+			iFibonaci++;
+		}
+        }
+        //Polinom
+		function polinom() {
+            var m,rv,temp,mod;
+		
+            m = parseInt(prompt("Nhập vào số cần kiểm tra = "))
+            
+            temp = m; rv = 0;
+            
+            while (m > 0) {
+                mod = m % 10;
+                m = m / 10;
+                rv= rv * 10 + mod;
+            }
+            
+            if (rv == temp) {
+                document.write("So "+ temp + " la so Polinom"); 
+            } else {
+                document.write("So "+ temp + " kp la so Polinom"); 
+            }
+        }
+		
+        // Viết chương trình liệt kê các số từ 100 đến 999 có tổng các chữ số chia hết cho 3.
+        function lietKe100Den999() {
+            var tempMod = 0;
+            var tempDiv = 0;
+            var sum  = 0;
+            document.write("Cac so tu 100 - 999 co tong cac chu so chia het cho 3 la:");
+            
+            for(let i = 100; i < 1000 ; i++) {
+                tempDiv = i;
+                sum = 0;
+                
+                while(tempDiv > 0 ) {	
+                    tempMod = tempDiv % 10;
+                    tempDiv = tempDiv / 10;
+                    sum += tempMod;
+                }
+                
+                
+                if(sum%3 == 0) {
+                    document.write(i+ ", ");
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>
